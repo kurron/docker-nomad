@@ -18,7 +18,7 @@ Docker Compose will automatically install the newly built image into the cache.
 `docker-compose up` will launch the image, proving it built correctly.  For everyday use, run `./nomad.sh`.
 
 ##Development Mode
-You can run `./nomad-dual.sh` to star a Nomad agent in both client and server mode.  This will allow you 
+You can run `./nomad-dual.sh` to start a Nomad agent in both client and server mode.  This will allow you 
 to test your Nomad scripts without setting up an actual Nomad cluster.
 
 #Troubleshooting
