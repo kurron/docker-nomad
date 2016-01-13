@@ -3,6 +3,5 @@ nomad:
     container_name: "nomad"
     net: "host"
     volumes:
-        - /home/vagrant:/home/developer
         - .:/pwd
-    user: 1000:1000
+        - /var/run/docker.sock:/var/run/docker.sock

@@ -16,16 +16,13 @@ RUN apt-get update && \
 
 RUN chmod 0555 /usr/local/bin/*
 
-# Create a user and group that matches what is in most Vagrant boxes
-RUN groupadd --gid 1000 developer && \
-    useradd --gid 1000 --uid 1000 --create-home --shell /bin/bash developer && \
-    chown -R developer:developer /home/developer
-
-# the user of this image is expected to mount his actual home directory to this one
-VOLUME ["/home/developer"]
+# So we can see any files that need to be evaluated
 VOLUME ["/pwd"]
 
-ENV HOME /home/developer
+# We need to be able to communicate with the Docker engine
+VOLUME ["/var/run/docker.sock"]
+
 WORKDIR /pwd
 ENTRYPOINT ["/usr/local/bin/nomad"]
 CMD ["--version"]
+#CMD ["agent", "-dev"]
