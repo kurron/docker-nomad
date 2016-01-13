@@ -19,6 +19,10 @@ Docker Compose will automatically install the newly built image into the cache.
 
 #Troubleshooting
 
+##Networking
+Nomad is a Docker scheduling tool and must communicate with agents and peers.  The simplest way to ensure 
+that the Docker networking setup is not interfering with that communication is to use `host` networking.
+
 ##User Account
 The image assumes that the account running the continer will have a user and group id of 1000:1000.  This allows the container 
 to save files in your home directory and keep the proper permissions.
