@@ -1,0 +1,11 @@
+terraform:
+    build: .
+    labels:
+        org.kurron.description: "Terraform"
+        org.kurron.version: "0.6.8"
+    container_name: "terraform"
+    net: "host"
+    volumes:
+        - /home/vagrant:/home/developer
+        - .:/pwd
+    user: 1000:1000
