@@ -2,9 +2,9 @@ FROM ubuntu:14.04
 
 MAINTAINER Ron Kurr <kurr@kurron.org>
 
-LABEL org.kurron.ide.name="Nomad" org.kurron.ide.version=0.2.3
+LABEL org.kurron.ide.name="Nomad" org.kurron.ide.version=0.3.0
 
-ADD https://releases.hashicorp.com/nomad/0.2.3/nomad_0.2.3_linux_amd64.zip /tmp/ide.zip
+ADD https://releases.hashicorp.com/nomad/0.3.0/nomad_0.2.3_linux_amd64.zip /tmp/ide.zip
 
 RUN apt-get update && \
     apt-get install -y unzip ca-certificates && \
