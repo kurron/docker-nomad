@@ -8,7 +8,7 @@ CMD="docker run \
        --user=$(id -u $(whoami)):$(id -g $(whoami)) \
        --volume $(pwd):/pwd \
        --volume /var/run/docker.sock:/var/run/docker.sock \
-       kurron/docker-nomad:0.2.3"
+       kurron/docker-nomad:0.3.0"
 
 #echo $CMD
 eval $CMD $*
