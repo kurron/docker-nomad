@@ -4,7 +4,7 @@ MAINTAINER Ron Kurr <kurr@kurron.org>
 
 LABEL org.kurron.ide.name="Nomad" org.kurron.ide.version=0.3.0
 
-ADD https://releases.hashicorp.com/nomad/0.3.0/nomad_0.2.3_linux_amd64.zip /tmp/ide.zip
+ADD https://releases.hashicorp.com/nomad/0.3.0/nomad_0.3.0_linux_amd64.zip /tmp/ide.zip
 
 RUN apt-get update && \
     apt-get install -y unzip ca-certificates && \
