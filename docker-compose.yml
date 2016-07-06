@@ -1,8 +1,13 @@
-nomad:
-    build: .
-    net: "host"
-    stdin_open: true
-    tty: true
-    volumes:
+version: '2'
+services:
+    nomad:
+        build: .
+        image: nomad:compose
+        container_name: "nomad"
+        network_mode: "host"
+        volumes:
         - .:/pwd
         - /var/run/docker.sock:/var/run/docker.sock
+        stdin_open: true
+        tty: true
+

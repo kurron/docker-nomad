@@ -8,7 +8,7 @@ CMD="docker run \
        --user=$(id -u $(whoami)):$(id -g $(whoami)) \
        --volume $(pwd):/pwd \
        --volume /var/run/docker.sock:/var/run/docker.sock \
-       kurron/docker-nomad:0.3.0 agent -dev -dc=my-datacenter -region=USA"
+       kurron/docker-nomad:0.4.0 agent -dev -dc=my-datacenter -region=USA"
 
 #echo $CMD
 eval $CMD $*
